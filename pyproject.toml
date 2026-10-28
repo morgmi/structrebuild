@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morgmi-structrebuild"
+version = "0.1.0"
+description = "按段落统计表格结构的重建相关的长度分布，标出过长、过短与重复表达的部分"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "morgmi" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://morgmi.github.io"
+Repository = "https://github.com/morgmi/structrebuild"
+Issues = "https://github.com/morgmi/structrebuild/issues"
+
+[project.scripts]
+structrebuild = "structrebuild:main"
+
+[tool.setuptools]
+py-modules = ["structrebuild"]
